@@ -1,0 +1,43 @@
+{
+  "name": "chatgpt-plus-dsh",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: sign in with a ChatGPT Plus/Pro account (OpenAI OAuth + PKCE) and use ChatGPT models in DSH on the subscription quota, without an API key.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale/*.json",
+    "cordis.patch.yml"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "chatgpt",
+    "codex",
+    "oauth"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "scripts": {
+    "test": "node tests/run-all.mjs"
+  }
+}

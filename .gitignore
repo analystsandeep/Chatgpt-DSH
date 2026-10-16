@@ -1,0 +1,56 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnpm-store/
+
+# Dependency install dirs (also covers pnpm link installs)
+.DS_Store
+Thumbs.db
+
+# Env and secrets — never commit real credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa*
+id_ed25519*
+.credentials.yaml
+auth.json
+secrets*.json
+secrets*.yaml
+
+# DSH runtime state (per-user, machine-specific — lives under $DSH_HOME, outside this repo)
+.dsh/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+
+# Test / coverage output
+coverage/
+.nyc_output/
+test-results/
+*.log
+
+# Local verification harnesses and screenshots (sandbox-specific, not part of the package)
+verify/
+*.png
+
+# Misc local junk
+.sudo_as_admin_successful

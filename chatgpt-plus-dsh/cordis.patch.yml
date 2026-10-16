@@ -1,0 +1,17 @@
+# chatgpt-plus-dsh bundle patch: mounts the plugin into a DSH profile layer stack.
+#
+# `id` is the row key a user overrides in their profile's cordis.patch.yml; `name` is
+# the module this package exports and must stay the package name. The two are kept
+# different on purpose (the plugin card prints both), like the official bundles.
+#
+# Every identifier this plugin owns is distinct from dsh-chatgpt-sub (row
+# `chatgpt-subscription`, route `openai-codex`, credential OPENAI_CODEX_API_KEY), so the
+# two plugins can be installed in the same profile without touching each other.
+#
+# Optional row config (all keys may be omitted):
+#   callbackPort:   OAuth redirect listener port. OpenAI only accepts 1455 for this client.
+#   signInTimeoutMs, requestTimeoutMs, streamIdleTimeoutMs: network bounds in milliseconds.
+#   clientVersion:  Codex client version sent when listing the account's models.
+- insert:
+    - id: chatgpt-plus
+      name: 'chatgpt-plus-dsh'
