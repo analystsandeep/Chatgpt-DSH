@@ -144,6 +144,4 @@ chatgpt-plus-dsh/
 
 ## License
 
-No license file is present in this repository yet. `package.json` declares
-`"license": "MIT"`, but until a `LICENSE` text is added and confirmed by the
-owner, treat the code as all rights reserved — do not redistribute.
+MIT — see [LICENSE](LICENSE).
